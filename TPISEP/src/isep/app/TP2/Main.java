@@ -5,9 +5,10 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         //discriminant();
-        parite();
-        max();
-        min();
+        //parite();
+        //max();
+        //min();
+        egaliteStr();
 
     }
 
@@ -76,5 +77,22 @@ public class Main {
         System.out.println("L'entier le plus petit est : " + min);
 
     }
+
+    public static void egaliteStr(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Saisissez une première chaine de charactère : ");
+        String preStr = scanner.nextLine();
+        System.out.println("Saisissez une deuxième chaine de charactère : ");
+        String deuStr = scanner.nextLine();
+        if (preStr.equals(deuStr)){
+            System.out.println("Ces deux chaines de charactères sont identiques");
+        }
+        else {
+            System.out.println("Ces deux chaines de charactères ne sont pas identiques");
+        }
+    }
+
 }
+
+
 
