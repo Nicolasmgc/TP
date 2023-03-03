@@ -4,7 +4,10 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        discriminant();
+        //discriminant();
+        parite();
+        max();
+        min();
 
     }
 
@@ -28,16 +31,50 @@ public class Main {
             System.out.println("La première racine est : " + -b + " + i * " + Math.sqrt(-delta) + "/" + 2 * a);
             System.out.println("La deuxième racine est : " + -b + " - i * " + Math.sqrt(-delta) + "/" + 2 * a);
         }
-        if (delta == 0) {
+        else if (delta == 0) {
             racine = -b / 2 * a ;
             System.out.println("La racine unique est : " + racine);
         }
-        if(delta>0){
+        else {
             racine = -b + Math.sqrt(b)/2 * a ;
             System.out.println("La première racine est : " + racine);
             racine = -b - Math.sqrt(b)/2 * a ;
             System.out.println("La deuxième racine est : " + racine);
         }
+    }
+
+
+    public static void parite(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Veuillez rentrer un entier : ");
+        int unEntier = scanner.nextInt();
+        if (unEntier % 2 == 0){
+            System.out.println("Le chiffre "+ unEntier + " est pair ! ");
+        }
+        else {
+            System.out.println("Le chiffre "+ unEntier + "est impair !");
+        }
+    }
+
+    public static void max(){
+            Scanner scanner = new Scanner(System.in);
+            System.out.println("Veuillez saisir un premier entier : ");
+            int preEntier = scanner.nextInt();
+            System.out.println("Veuillez saisir un deuxième entier : ");
+            int deuEntier = scanner.nextInt();
+            int max = Math.max(preEntier, deuEntier);
+            System.out.println("L'entier le plus grand est : " + max);
+    }
+
+    public static void min(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Veuillez saisir un premier entier : ");
+        int preEntier = scanner.nextInt();
+        System.out.println("Veuillez saisir un deuxième entier : ");
+        int deuEntier = scanner.nextInt();
+        int min = Math.min(preEntier,deuEntier);
+        System.out.println("L'entier le plus petit est : " + min);
+
     }
 }
 
