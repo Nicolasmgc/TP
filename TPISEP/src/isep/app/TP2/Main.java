@@ -8,7 +8,10 @@ public class Main {
         //parite();
         //max();
         //min();
-        egaliteStr();
+        //egaliteStr();
+        factorielle();
+        countdown();
+        carres();
 
     }
 
@@ -90,6 +93,36 @@ public class Main {
         else {
             System.out.println("Ces deux chaines de charactères ne sont pas identiques");
         }
+    }
+
+    public static void factorielle(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Saisir un entier positif ou nul");
+        int n = scanner.nextInt();
+        int factorielle = 1;
+        if (n == 0 ){
+            System.out.println(n + "! = 1");
+        }
+        else {
+            for (int i = 0; i <= n; i++) {
+                factorielle *= i + 1;
+
+            }
+            System.out.println(n + "! = " + factorielle);
+        }
+    }
+    public static void countdown(){
+        for(int i = 10; i >= 0; i --){
+            System.out.println(i);
+        }
+        System.out.println("BOOM");
+    }
+
+    public static void carres(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Saisir un entier");
+        int x = scanner.nextInt();
+        System.out.println(x + "    " + x * x);
     }
 
 }
