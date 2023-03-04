@@ -12,8 +12,10 @@ public class Main {
         //factorielle();
         //countdown();
         //carres();
-        tableMultiplication();
-        division();
+        //tableMultiplication();
+        //division();
+        regle();
+        nombrePremier();
     }
 
     public static void nomFonction() {
@@ -150,7 +152,44 @@ public class Main {
         double resultat = entier / entier2;
         System.out.println("La division de " + entier + " par " + entier2 + " est égale à " + resultat );
     }
+    public static void regle(){
+        Scanner scanner = new Scanner(System.in);
+        int lenght;
+        do{
+            System.out.println("Veuillez saisir la longueur de votre règle");
+            lenght = scanner.nextInt();
+        } while (lenght<=0);
+        for (int i = 0; i<lenght; i++){
+            if (i%10 == 0 ){
+                System.out.print("|");
+            }else {
+                System.out.print("-");
+            }
+        }
+    }
 
+
+    public static void nombrePremier(){
+        Scanner scanner = new Scanner(System.in);
+        int nbr;
+        int x = 0;
+        int y = 0;
+        do{
+            System.out.println("Saisissez un nombre entier :");
+            nbr = scanner.nextInt();
+        }
+        while (nbr<=0);
+        for (int i = 2; i <= Math.sqrt(x); i++){
+            if (x % i == 0){
+                y+=1;
+            }
+        }
+        if (y==0){
+            System.out.println(x + " est premier");
+        }else{
+            System.out.println(x + " n'est pas premier");
+        }
+    }
 
 
 
