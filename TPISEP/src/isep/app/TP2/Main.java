@@ -9,10 +9,11 @@ public class Main {
         //max();
         //min();
         //egaliteStr();
-        factorielle();
-        countdown();
-        carres();
-
+        //factorielle();
+        //countdown();
+        //carres();
+        tableMultiplication();
+        division();
     }
 
     public static void nomFonction() {
@@ -124,6 +125,34 @@ public class Main {
         int x = scanner.nextInt();
         System.out.println(x + "    " + x * x);
     }
+
+
+    // je pense que une boucle "for" est le plus appropriée
+{}
+    public static void tableMultiplication(){
+        for (int j = 1; j<=10; j++){
+            for (int i = 1; i<=10; i++){
+                System.out.print(j*i + "\t");
+            }
+            System.out.println("\n");
+        }
+    }
+    public static void division(){
+        Scanner scanner = new Scanner(System.in);
+        int entier;
+        int entier2;
+        do {
+            System.out.println("Veuillez saisir un entier positif ou nul");
+            entier = scanner.nextInt();
+            System.out.println("Veuillez saisir un deuxième entier positif ou nul");
+            entier2 = scanner.nextInt();
+        } while (entier2 == 0 );
+        double resultat = entier / entier2;
+        System.out.println("La division de " + entier + " par " + entier2 + " est égale à " + resultat );
+    }
+
+
+
 
 }
 
